@@ -1,0 +1,11 @@
+a, b = map(int, input().split())
+max_roll = max(a, b)
+c = 6 - max_roll + 1
+d = 6
+a, b = c, d
+while b:
+    a, b = b, a % b
+    gcd_value = a
+numerator = c // gcd_value
+denominator = d // gcd_value
+print(f"{numerator}/{denominator}")
